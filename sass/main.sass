@@ -7,6 +7,11 @@
 
 .app
     height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    padding-left: 30px
+    padding-right: 30px
 .login
     &__form
         height: 100%
@@ -38,7 +43,138 @@
                 color: #1ea31e
                 background: #fff
 
+.lobby
+    &__play
+        padding: 30px 0
+        display: flex
+        justify-content: center
+    &__btn
+        padding: 30px 0
+        color: #fff
+        background: #301ea3
+        transition: all .3s ease
+        &:hover
+            color: #301ea3
+            background: #fff
+        @media (max-width: 500px)
+            padding: 15px
+            width: 300px
+
+    &__player
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        gap: 30px
+
+.player
+    width: 500px
+    border: 1px solid #000
+    border-radius: 15px
+    list-style-type: none
+    display: flex
+    flex-direction: column
+    &__you
+        color: white
+        background: #301ea3
+    &__header
+        height: 50px
+        display: flex
+        justify-content: center
+        align-items: center
+        border-bottom: 1px solid #000
+    &__main
+        padding: 0 15px
+        height: 150px
+        border-bottom: 1px solid #000
+    &__move
+        list-style-type: none
+        display: flex
+        flex-direction: column
+        gap: 15px
+    &__result
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        list-style-type: none
+        &_wins, &_loses
+            width: 50%
+    &__footer
+        height: 50px
+
+.spinner
+    text-align: center
+    &__animation
+        display: inline-block
+        border-radius: 50%
+        width: 40px
+        height: 40px
+        border-top: 3px solid rgba(0, 0, 0, 0.1)
+        border-right: 3px solid rgba(0, 0, 0, 0.1)
+        border-bottom: 3px solid rgba(0, 0, 0, 0.1)
+        border-left: 3px solid #301ea3
+        animation: loading-spinner 0.5s infinite linear
+
+        /* это текст для спиннера, например - "Загрузка..." */
+
+    &__info
+        display: block
+        padding-top: 5px
+        color: #301ea3
+        font-size: .9rem
+
+        /* сама анимация вращения */
+    @keyframes loading-spinner
+        0%
+            transform: rotate(0deg)
+        100%
+            transform: rotate(360deg)
+
+.game
+    display: flex
+    gap: 30px
 .btn
     width: 150px
-
     cursor: pointer
+    &__game_rock, &__game_paper, &__game_scissors
+        padding: 15px 0
+        transition: all .3s ease
+    &__game_rock
+        background: #d60e0e
+        color: #fff
+        &:hover
+            background: #fff
+            color: #d60e0e
+    &__game_paper
+        background: #220ed6
+        color: #fff
+        &:hover
+            background: #fff
+            color: #220ed6
+    &__game_scissors
+        background: #0ed62c
+        color: #fff
+        &:hover
+            background: #fff
+            color: #0ed62c
+.img
+    width: 100%
+    height: 100%
+    &__block
+        width: 250px
+        height: 250px
+
+.button
+    &__block
+        margin: 30px 0
+        display: flex
+        gap: 50px
+    &__lobby, &__play
+        padding: 15px 0
+        background: #301ea3
+        color: #fff
+        transition: all .3s ease
+        &:hover
+            background: #fff
+            color: #301ea3

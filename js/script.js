@@ -15,6 +15,7 @@ application.screens.login = pages.loginPage;
 application.screens.lobby = pages.lobbyPage;
 application.screens.waitingPlayer = pages.waitingPlayerPage;
 application.screens.game = pages.gamePage;
+application.screens.waitingMove = pages.waitingMovePage;
 application.screens.end = pages.endGame;
 
 window.addEventListener("DOMContentLoaded", () => {
