@@ -1,1 +1,44 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
 
+.app
+    height: 100vh
+.login
+    &__form
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        &_control
+            display: flex
+            gap: 30px
+            margin-top: 30px
+            @media (max-width: 500px)
+                flex-direction: column
+        &_input
+            width: 300px
+            padding: 30px 15px
+            border-bottom: 1.5px solid #000
+            font-size: 16px
+            &:focus-within
+                border-bottom: 1.5px solid #1ea31e
+        &_btn
+            color: #fff
+            background: #1ea31e
+            transition: all .3s ease
+            @media (max-width: 500px)
+                padding: 15px
+                width: 300px
+            &:hover
+                color: #1ea31e
+                background: #fff
+
+.btn
+    width: 150px
+
+    cursor: pointer

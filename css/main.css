@@ -1,1 +1,58 @@
-/*# sourceMappingURL=main.css.map */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+.app {
+  height: 100vh;
+}
+
+.login__form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login__form_control {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+@media (max-width: 500px) {
+  .login__form_control {
+    flex-direction: column;
+  }
+}
+.login__form_input {
+  width: 300px;
+  padding: 30px 15px;
+  border-bottom: 1.5px solid #000;
+  font-size: 16px;
+}
+.login__form_input:focus-within {
+  border-bottom: 1.5px solid #1ea31e;
+}
+.login__form_btn {
+  color: #fff;
+  background: #1ea31e;
+  transition: all 0.3s ease;
+}
+@media (max-width: 500px) {
+  .login__form_btn {
+    padding: 15px;
+    width: 300px;
+  }
+}
+.login__form_btn:hover {
+  color: #1ea31e;
+  background: #fff;
+}
+
+.btn {
+  width: 150px;
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */
